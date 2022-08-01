@@ -63,23 +63,17 @@
         <footer>Liability limited by a scheme approved under Professional Standards Legislation</footer>
 
         <script>
-            const refresh = e => {
-                if (e) {
-                    e.preventDefault()
-                    window.location.hash = '#' + e.target.href.split('#')[1]
+            const refresh = event => {
+                if (event) {
+                    event.preventDefault()
+                    window.location.hash = '#' + event.target.href.split('#')[1]
                 }
                 var current = ['about', 'cases', 'contact'].includes(window.location.hash.slice(1)) ?
                     window.location.hash.slice(1) : 'about'
-                console.log('current', current)
                 document.querySelectorAll('div').forEach(el => {
-                    if (el.id == current) {
-                        el.style.display = 'block'
-                        document.querySelector('nav a[href="#' + el.id +'"]').className = 'active'
-                    }
-                    else {
-                        el.style.display = 'none'
-                        document.querySelector('nav a[href="#' + el.id +'"]').className = ''
-                    }
+                    var link = document.querySelector('nav a[href="#' + el.id +'"]')
+                    if (el.id == current) {el.style.display = 'block'; link.className = 'active'}
+                    else {el.style.display = 'none'; link.className = ''}
                 })
             }
             refresh()
