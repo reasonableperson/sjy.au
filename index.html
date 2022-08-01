@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Scott Young</title>
+        <style type="text/css">
+            body {font-family: sans-serif; font-size: large; max-width: 30em; margin: 0 auto}
+            h1 {text-align: center; font-variant: small-caps; margin-bottom: 0}
+            .subtitle {text-align: center; margin-top: 0.5em}
+            nav {text-align: center; margin: 2em 0}
+            footer {text-align: center; margin: 4em 0}
+            nav li {display: inline-block; padding: 0.5em}
+            nav li:after {content: "•"; margin-left: 1em}
+            nav li:last-child:after {content: ""; margin-left: 0}
+            .contact {text-align: center}
+            .photo {width: 40%; float: left; margin-right: 1em}
+            li {margin-bottom: 1em}
+            .active {font-weight: bold}
+        </style>
+    </head>
+    <body>
+        <h1>Scott Young</h1>
+        <p class="subtitle">Australian barrister</p>
+
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#cases">Cases</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div id="about">
+            <img src="sy.jpg" class="photo">
+            <p>Scott was admitted as a lawyer in WA in 2016 and as a barrister in NSW in 2021. Scott has a broad practice including commercial litigation, criminal law (both prosecution and defence), professional regulation and administrative law matters. He accepts briefs to appear in all Australian jurisdictions.</p>
+
+            <p>From 2017 to 2021, Scott was a federal prosecutor at the Sydney and Melbourne offices of the Commonwealth DPP, where he was the Associate to the Director in 2018. Scott has appeared in most courts and tribunals in NSW and Victoria, and has also been briefed in WA and ACT matters. From 2014 to 2016, he was the Associate to Justice Mitchell of the WA Court of Appeal.</p>
+
+            <p>Scott is a member of the CDPP’s counsel panel, and has special expertise in financial crime, fraud and corruption matters involving large volumes of digital and documentary evidence. His software development and mathematics background makes him ideal counsel in matters involving computer crime, cryptocurrency and complex scientific evidence.</p>
+        </div>
+
+        <div id="cases">
+            <ul>
+                <li><em>R v El-Debel and Kahlon</em> (2022) ACTSC (led by D Staehli SC and A Haban-Beer), for Crown in a conspiracy to defraud trial</li>
+                <li><em>Stud Systems Pty Ltd v Salkic</em> (2022) NSWDC, for defendant pleading equitable defences to a commercial guarantee</li>
+                <li><em>Roc Air Investments Pty Ltd v Australian Pilot Training Alliance Pty Ltd</em> (2022) VMC, for defendant in a commercial aviation contract claim</li>
+                <li><em>RRCX and Minister for Immigration</em> <a href="https://www.austlii.edu.au/au/cases/cth/AATA/2022/379.html">[2022] AATA 379</a>, for applicant for revocation of visa cancellation under s 501CA(4) of the Migration Act</li>
+                <li><em>Health Care Complaints Commission v Chahoud</em> <a href="https://www.caselaw.nsw.gov.au/decision/17fcdf12449b81483f57edec">[2022] NSWCATOD 36</a>, for respondent to professional misconduct charges</li>
+                <li><em>New South Wales v Kiskonen</em> <a href="https://www.caselaw.nsw.gov.au/decision/17ae62c4f87505817ce30e5a">[2021] NSWSC 915</a> (led by M Johnston SC and E Kerkyasharian), for respondent to an application under the Terrorism (High Risk Offenders) Act</li>
+            </ul>
+        </div>
+
+        <div id="contact">
+            <p class="contact">☎ 0417 184 177</p>
+            <p class="contact">✉ <a href="mailto:syoung@fjc.net.au">syoung@fjc.net.au</a></p>
+        </div>
+
+        <footer>Liability limited by a scheme approved under Professional Standards Legislation</footer>
+
+        <script>
+            const refresh = e => {
+                if (e) {
+                    e.preventDefault()
+                    window.location.hash = '#' + e.target.href.split('#')[1]
+                }
+                var current = ['about', 'cases', 'contact'].includes(window.location.hash.slice(1)) ?
+                    window.location.hash.slice(1) : 'about'
+                console.log('current', current)
+                document.querySelectorAll('div').forEach(el => {
+                    if (el.id == current) {
+                        el.style.display = 'block'
+                        document.querySelector('nav a[href="#' + el.id +'"]').className = 'active'
+                    }
+                    else {
+                        el.style.display = 'none'
+                        document.querySelector('nav a[href="#' + el.id +'"]').className = ''
+                    }
+                })
+            }
+            refresh()
+            document.body.addEventListener('click', refresh)
+        </script>
+    </body>
+</html>
