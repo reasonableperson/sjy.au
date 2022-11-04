@@ -80,7 +80,7 @@
     <footer>Liability limited by a scheme approved under Professional Standards Legislation</footer>
 
     <script>
-      const refresh = event => {
+      const navigate = event => {
         if (event?.target.href) {
           event.preventDefault()
           window.location.hash = '#' + event.target.href.split('#')[1]
@@ -92,9 +92,9 @@
           if (el.id == current) {el.style.display = 'block'; link.className = 'active'}
           else {el.style.display = 'none'; link.className = ''}
         })
-      }; refresh()
-      document.querySelector('nav').addEventListener('click', refresh)
-      document.querySelector('h1').addEventListener('click', refresh)
+      }; navigate()
+      document.querySelector('nav').addEventListener('click', navigate)
+      document.querySelector('h1').addEventListener('click', navigate)
     </script>
   </body>
 </html>
