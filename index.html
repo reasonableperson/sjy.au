@@ -4,7 +4,6 @@
     <title>Scott Young, Australian barrister</title>
     <link rel=icon href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text x="-.13em" y=".9em" font-size="90">⚖️</text></svg>'>
     <link rel="preload" as="image" href="mc.jpg">
-    <link rel="preload" as="image" href="fjc.jpg">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style type="text/css">
       body {font-family: sans-serif; font-size: large; max-width: 30em; margin: 0 auto; padding: 1em}
@@ -22,13 +21,10 @@
       .photo {width: 40%; float: left; margin-right: 1em}
       li {margin-bottom: 1em}
       .active {font-weight: bold}
-      .split {display: flex}
-      .split #mc {background: url(mc.jpg); background-size: cover; background-position: center}
-      .split #fjc {background: url(fjc.jpg); background-size: cover; background-position: center}
-      .split a {flex: 1; margin: 0 2%; border: 5px #ccc solid; border-radius: 1em; color: black; text-decoration: none}
-      .split div {margin: 0; padding: 1em; background-color: rgba(255, 255, 255, 0.7)}
-      .split div:hover {background-color: rgba(0,0,0,0); color: white; text-shadow: 0px 0px 3px black;}
-      .split p {margin: 0.5em}
+      #mc {display: block; width: 15em; margin: 0 auto; background: url(mc.jpg); background-size: cover; background-position: center; border: 5px #ccc solid; border-radius: 1em; color: black; text-decoration: none}
+      #mc div {background-color: rgba(255, 255, 255, 0.7); padding: 1em; border-radius: 0.8em}
+      #mc div:hover {background-color: rgba(0,0,0,0); color: white; text-shadow: 0px 0px 3px black;}
+      #mc p {margin: 0.5em}
     </style>
   </head>
   <body>
@@ -99,10 +95,7 @@
 
     <div id="contact">
       <h3>Chambers</h3>
-      <div class="split">
-        <a id="mc" href="https://murraychamberswa.com.au/barristers/scott-young/"><div><p><b>Murray<br>Chambers</b></p><p>Perth</p></div></a>
-        <a id="fjc" href="https://fjc.net.au/barrister/scott-young/"><div><p><b>Frederick Jordan<br>Chambers</b></p><p>Sydney</p></div></a>
-      </div>
+      <a id="mc" href="https://murraychamberswa.com.au/barristers/scott-young/"><div><p><b>Murray<br>Chambers</b></p><p>Perth</p></div></a>
       
       <h3>Direct</h3>
       <p>📧 <a href="mailto:syoung@mchambers.com.au">syoung@mchambers.com.au</a></p>
