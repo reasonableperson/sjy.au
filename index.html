@@ -1,36 +1,47 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <title>Scott Young, Australian barrister</title>
-    <link rel=icon href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text x="-.13em" y=".9em" font-size="90">⚖️</text></svg>'>
-    <link rel="preload" as="image" href="sy.jpg">
-    <link rel="preload" as="image" href="mc.jpg">
+    <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text x="-.13em" y=".9em" font-size="90">⚖️</text></svg>'>
+    <link rel="preload" as="image" href="sy.avif">
+    <link rel="preload" as="image" href="mc.avif">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style type="text/css">
-      body {font-family: sans-serif; font-size: large; max-width: 30em; margin: 0 auto; padding: 1em}
-      h1 {text-align: center; font-variant: small-caps; margin-bottom: 0}
-      h1 a {color: black; text-decoration: none}
-      h3 {text-align: center; margin: 2em 0 1em 0; font-weight: normal}
-      .subtitle {text-align: center; margin-top: 0.5em}
-      nav {text-align: center; margin: 2em 0}
-      nav ul {padding: 0}
-      footer {text-align: center; margin: 4em 0}
-      nav li {display: inline-block; padding: 0.5em}
-      nav li:after {content: "•"; margin-left: 1em}
-      nav li:last-child:after {content: ""; margin-left: 0}
-      #contact p {text-align: center}
-      .photo {width: 40%; float: left; margin-right: 1em}
-      li {margin-bottom: 1em}
-      .active {font-weight: bold}
-      #mc {display: block; width: 15em; margin: 0 auto; background: url(mc.jpg); background-size: cover; background-position: center; border: 5px #ccc solid; border-radius: 1em; color: black; text-decoration: none}
+    <style>
+      body {font-family: sans-serif; font-size: 1.3em; max-width: 1000px; margin: 0 auto; padding: 1em}
+      header, nav, footer {text-align: center}
+      header h1 {font-variant: small-caps; margin-bottom: 0}
+      header h1 a {color: black; text-decoration: none}
+      header #subtitle {margin-top: 0.5em}
+      nav {margin: 2em 0}
+      nav ul {padding: 0; display: flex; justify-content: center; list-style: none}
+      nav li {padding: 0.5em}
+      nav li::after {content: "•"; margin-left: 1em}
+      nav li:last-child::after {content: ""; margin-left: 0}
+      nav a.active {font-weight: bold}
+      #about img {width: 20em; float: left; margin-right: 3%; aspect-ratio: 1}
+      #cases, #contact {max-width: 30em; margin: 0 auto}
+      #cases ul {padding-left: 1em}
+      #cases li {margin-bottom: 1em}
+      #contact {text-align: center}
+      #contact h3 {font-weight: normal}
+      #mc {display: block; width: 15em; margin: 0 auto; background: url(mc.avif); background-size: cover; background-position: center; border: 5px #ccc solid; border-radius: 1em; color: black; text-decoration: none}
       #mc div {background-color: rgba(255, 255, 255, 0.7); padding: 1em; border-radius: 0.8em}
-      #mc div:hover {background-color: rgba(0,0,0,0); color: white; text-shadow: 0px 0px 3px black;}
+      #mc div:hover {background-color: transparent; color: white; text-shadow: 0px 0px 3px black;}
       #mc p {margin: 0.5em}
+      footer {margin: 4em 0}
+      @media (max-width: 650px) {
+        body {font-size: 1.2em}
+        nav {margin: 1em 0}
+        #about img {width: 100%; float: none; margin-right: 0}
+        footer {margin: 2em 0; font-size: smaller}
+      }
     </style>
   </head>
   <body>
-    <h1><a href="#">Scott Young</a></h1>
-    <p class="subtitle">Australian barrister</p>
+    <header>
+      <h1><a href="#">Scott Young</a></h1>
+      <p id="subtitle">Australian barrister</p>
+    </header>
 
     <nav>
       <ul>
@@ -40,96 +51,98 @@
       </ul>
     </nav>
 
-    <div id="about">
-      <img src="sy.jpg" class="photo" alt="photo of Scott Young">
-      <p>Scott was admitted as a lawyer in WA in 2016 and as a barrister in NSW
-        in 2021. Scott has a broad practice including commercial litigation,
-        criminal law (both prosecution and defence) and public law (including
-        inquests, inquiries, migration and professional discipline) matters.
-        He appears in all Australian jurisdictions.</p>
-      
-      <p>From 2017 to 2021, Scott was a federal prosecutor at the Sydney and
-        Melbourne offices of the Commonwealth DPP. In 2018, he was the Associate
-        to the Director. From 2014 to 2016, he was the Associate to Justice
-        Mitchell of the WA Court of Appeal.</p>
-      
-      <p>Scott is a member of the CDPP’s counsel panel, and has special expertise
-        in financial crime, fraud and corruption matters involving large volumes
-        of digital and documentary evidence. He holds a Bachelor of Laws and
-        Bachelor of Science (Pure Mathematics) from the University of Western
-        Australia and previously worked as a software developer.</p>
-    </div>
+    <main>
+      <section id="about">
+        <img src="sy.avif" alt="photo of Scott Young">
+        <p>Scott was called to the Bar in 2021. He has a broad practice
+        including criminal (both prosecution and defence), commercial and
+        public law matters. He is based in Perth, but appears in all Australian
+        jurisdictions.</p>
 
-    <div id="cases">
-      <ul>
-        <li><em>El-Debel v The King</em>
-          <a href="https://www.courts.act.gov.au/supreme/judgments/el-debel-v-the-king-kahlon-v-the-king">[2025] ACTCA 23</a>
-          (led by A Haban-Beer), for Crown on conviction appeal</li>
-        
-        <li><em>Baumgarten and eSafety Commissioner (Guidance and Appeals Panel)</em>
-          <a href="https://www.austlii.edu.au/au/cases/cth/ARTA/2025/59.html">[2025] ARTA 59</a>,
-          for merits review applicant</li>
-        
-        <li><em>R v Roy (No 3)</em>
-          <a href="https://www.courts.act.gov.au/supreme/judgments/r-v-roy-no-3">[2025] ACTSC 5</a>
-          (led by J White SC), for Crown in application to exclude computer evidence</li>
-        
-        <li><em>N v Minister for Immigration</em>
-          <a href="https://www.judgments.fedcourt.gov.au/judgments/Judgments/fca/single/2024/2024fca0468">[2024] FCA 468</a>,
-          for judicial review applicant</li>
+        <p>From 2017 to 2021, Scott was a federal prosecutor at the Sydney and
+        Melbourne offices of the Commonwealth Director of Public Prosecutions.
+        In 2018, he was the Associate to the Director. From 2014 to 2016, he
+        was the Associate to Justice Mitchell of the WA Court of Appeal.</p>
 
-        <li><em>R (Cth) v V</em>
-          <a href="https://www.courts.act.gov.au/supreme/judgments/r-v-vilayur">[2023] ACTSC 59</a>; 383 FLR 366,
-          <a href="https://www.courts.act.gov.au/supreme/judgments/r-v-vilayur-no-2">[2024] ACTSC 2</a>,
-          for Crown in permanent stay and disclosure applications</li>
+        <p>Scott is a member of the CDPP’s counsel panel, and has special
+        expertise in financial crime, fraud and corruption matters involving
+        large volumes of digital and documentary evidence. He holds a Bachelor
+        of Laws and Bachelor of Science (Pure Mathematics) from the University
+        of Western Australia and previously worked as a software developer.</p>
+      </section>
 
-        <li><em>G & G</em>
-          <a href="https://www.austlii.edu.au/au/cases/cth/FedCFamC1F/2023/920.html">[2023] FedCFamC1F 920</a>,
-          <a href="https://www.austlii.edu.au/au/cases/cth/FedCFamC1F/2023/968.html">[2023] FedCFamC1F 968</a>,
-          for interim property settlement applicant</li>
+      <section id="cases">
+        <ul>
+          <li><em>El-Debel v The King</em>
+            <a href="https://www.courts.act.gov.au/supreme/judgments/el-debel-v-the-king-kahlon-v-the-king">[2025] ACTCA 23</a>
+            (led by A Haban-Beer), for Crown on conviction appeal</li>
 
-        <li><em>Inquests into the deaths of K and L</em>
-          <a href="https://www.austlii.edu.au/au/cases/nsw/NSWCorC/2023/16.html">[2023] NSWCorC 16</a>,
-          <a href="https://www.austlii.edu.au/au/cases/nsw/NSWCorC/2023/17.html">[2023] NSWCorC 17</a>
-          (led by D Ward SC), as counsel assisting</li>
+          <li><em>Baumgarten and eSafety Commissioner (Guidance and Appeals Panel)</em>
+            <a href="https://www.austlii.edu.au/au/cases/cth/ARTA/2025/59.html">[2025] ARTA 59</a>,
+            for merits review applicant</li>
 
-        <li><em>N and Minister for Immigration</em>
-          <a href="https://www.austlii.edu.au/au/cases/cth/AATA/2023/181.html">[2023] AATA 181</a>,
-          for applicant for revocation of visa cancellation</li>
-        
-        <li><em>R (Cth) v E and K</em>
-          <a href="https://www.courts.act.gov.au/supreme/judgments/r-v-el-debel-r-v-kahlon-no-6">[2022] ACTSC 156</a>,
-          <a href="https://www.courts.act.gov.au/supreme/judgments/r-v-el-debel-r-v-kahlon-no-7">[2022] ACTSC 313</a>
-          (led by D Staehli SC, A Haban-Beer and J Nottle),
-          for Crown in conspiracy to defraud trial</li>
-        
-        <li><em>RRCX and Minister for Immigration</em>
-          <a href="https://www.austlii.edu.au/au/cases/cth/AATA/2022/379.html">[2022] AATA 379</a>,
-          for applicant for revocation of visa cancellation</li>
-        
-        <li><em>New South Wales v K</em>
-          <a href="https://www.caselaw.nsw.gov.au/decision/17ae62c4f87505817ce30e5a">[2021] NSWSC 915</a>
-          (led by M Johnston SC and E Kerkyasharian),
-          for respondent to <em>Terrorism (High Risk Offenders) Act</em> application</li>
-      </ul>
-    </div>
+          <li><em>R v Roy (No 3)</em>
+            <a href="https://www.courts.act.gov.au/supreme/judgments/r-v-roy-no-3">[2025] ACTSC 5</a>
+            (led by J White SC), for Crown in application to exclude computer evidence</li>
 
-    <div id="contact">
-      <h3>Chambers</h3>
-      <a id="mc" href="https://murraychamberswa.com.au/barristers/scott-young/"><div><p><b>Murray<br>Chambers</b></p><p>Perth</p></div></a>
-      
-      <h3>Direct</h3>
-      <p>📧 <a href="mailto:syoung@mchambers.com.au">syoung@mchambers.com.au</a></p>
-      <p>📱 <a href="tel:61417184177">+61 417 184 177</a><br>(iMessage, WhatsApp, Signal)</p>
-      
-      <h3>Other profiles</h3>
-      <p>🇦🇺 <a href="https://fab.austbar.asn.au/profile/Boejlz4a">Australian Bar Association</a></p>
-      <p>⬅️ <a href="https://www.wabar.asn.au/barrister/young-scott/">WA Bar Association</a></p>
-      <p>🌐 <a href="https://www.linkedin.com/in/scott-young-978390213/">LinkedIn</a></p>
-      <p>💻 <a href="https://github.com/reasonableperson">GitHub</a></p>
-    </div>
+          <li><em>N v Minister for Immigration</em>
+            <a href="https://www.judgments.fedcourt.gov.au/judgments/Judgments/fca/single/2024/2024fca0468">[2024] FCA 468</a>,
+            for judicial review applicant</li>
 
-    <footer>Liability limited by a scheme approved under Professional Standards Legislation</footer>
+          <li><em>R (Cth) v V</em>
+            <a href="https://www.courts.act.gov.au/supreme/judgments/r-v-vilayur">[2023] ACTSC 59</a>; 383 FLR 366,
+            <a href="https://www.courts.act.gov.au/supreme/judgments/r-v-vilayur-no-2">[2024] ACTSC 2</a>,
+            for Crown in permanent stay and disclosure applications</li>
+
+          <li><em>G & G</em>
+            <a href="https://www.austlii.edu.au/au/cases/cth/FedCFamC1F/2023/920.html">[2023] FedCFamC1F 920</a>,
+            <a href="https://www.austlii.edu.au/au/cases/cth/FedCFamC1F/2023/968.html">[2023] FedCFamC1F 968</a>,
+            for interim property settlement applicant</li>
+
+          <li><em>Inquests into the deaths of K and L</em>
+            <a href="https://www.austlii.edu.au/au/cases/nsw/NSWCorC/2023/16.html">[2023] NSWCorC 16</a>,
+            <a href="https://www.austlii.edu.au/au/cases/nsw/NSWCorC/2023/17.html">[2023] NSWCorC 17</a>
+            (led by D Ward SC), as counsel assisting</li>
+
+          <li><em>N and Minister for Immigration</em>
+            <a href="https://www.austlii.edu.au/au/cases/cth/AATA/2023/181.html">[2023] AATA 181</a>,
+            for applicant for revocation of visa cancellation</li>
+
+          <li><em>R (Cth) v E and K</em>
+            <a href="https://www.courts.act.gov.au/supreme/judgments/r-v-el-debel-r-v-kahlon-no-6">[2022] ACTSC 156</a>,
+            <a href="https://www.courts.act.gov.au/supreme/judgments/r-v-el-debel-r-v-kahlon-no-7">[2022] ACTSC 313</a>
+            (led by D Staehli SC, A Haban-Beer and J Nottle),
+            for Crown in conspiracy to defraud trial</li>
+
+          <li><em>RRCX and Minister for Immigration</em>
+            <a href="https://www.austlii.edu.au/au/cases/cth/AATA/2022/379.html">[2022] AATA 379</a>,
+            for applicant for revocation of visa cancellation</li>
+
+          <li><em>New South Wales v K</em>
+            <a href="https://www.caselaw.nsw.gov.au/decision/17ae62c4f87505817ce30e5a">[2021] NSWSC 915</a>
+            (led by M Johnston SC and E Kerkyasharian),
+            for respondent to <em>Terrorism (High Risk Offenders) Act</em> application</li>
+        </ul>
+      </section>
+
+      <section id="contact">
+        <h3>Chambers</h3>
+        <a id="mc" href="https://murraychamberswa.com.au/barristers/scott-young/"><div><p><b>Murray<br>Chambers</b></p><p>Perth</p></div></a>
+
+        <h3>Direct</h3>
+        <p>📧 <a href="mailto:syoung@mchambers.com.au">syoung@mchambers.com.au</a></p>
+        <p>📱 <a href="tel:61417184177">+61 417 184 177</a><br>(iMessage, WhatsApp, Signal)</p>
+
+        <h3>Other profiles</h3>
+        <p>🇦🇺 <a href="https://fab.austbar.asn.au/profile/Boejlz4a">Australian Bar Association</a></p>
+        <p>⬅️ <a href="https://www.wabar.asn.au/barrister/young-scott/">WA Bar Association</a></p>
+        <p>🌐 <a href="https://www.linkedin.com/in/scott-young-978390213/">LinkedIn</a></p>
+        <p>💻 <a href="https://github.com/reasonableperson">GitHub</a></p>
+      </section>
+    </main>
+
+    <footer>Liability limited by a scheme approved under
+      <a href="https://www.austlii.edu.au/au/legis/wa/consol_act/psa1997249/s45.html">Professional Standards Legislation</a></footer>
 
     <script>
       const navigate = event => {
@@ -138,9 +151,9 @@
           window.location.hash = '#' + event.target.href.split('#')[1]
         }
         var current = window.location.hash.slice(1)
-        if (!['about', 'cases', 'contact'].includes(current)) current = 'about'
-        document.querySelectorAll('body > div').forEach(el => {
-          var link = document.querySelector('nav a[href="#' + el.id +'"]')
+        if (!current || !document.getElementById(current)) current = 'about'
+        document.querySelectorAll('section').forEach(el => {
+          var link = document.querySelector(`nav a[href="#${el.id}"]`)
           if (el.id == current) {el.style.display = 'block'; link.className = 'active'}
           else {el.style.display = 'none'; link.className = ''}
         })
